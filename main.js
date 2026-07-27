@@ -164,10 +164,11 @@
   if (!el) return;
 
   const phrases = [
-    'Full-Stack Developer',
-    'UX Engineer',
-    'Problem Solver',
-    'Tech Lead',
+    'Trilingual Communicator',
+    'Global Business Professional',
+    'International Affairs',
+    'Japanese N1 · English 900',
+    'Project Manager',
   ];
 
   let phraseIdx = 0;
@@ -221,20 +222,19 @@
   const counters = document.querySelectorAll('.hero__stat-number[data-count]');
   if (!counters.length) return;
 
-  const DURATION = 2000; // ms
+  const DURATION = 2000;
 
   function animateCounter(el) {
-    const target = parseInt(el.dataset.count, 10);
-    const start  = performance.now();
+    const target  = parseInt(el.dataset.count, 10);
+    const suffix  = el.dataset.suffix || '+';   // GPA → ".32", 나머지 → "+"
+    const start   = performance.now();
 
     function step(now) {
       const elapsed  = now - start;
       const progress = Math.min(elapsed / DURATION, 1);
-      // Ease out cubic
       const eased    = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target);
+      el.textContent = Math.round(eased * target) + (progress < 1 ? '' : suffix);
       if (progress < 1) requestAnimationFrame(step);
-      else el.textContent = target;
     }
     requestAnimationFrame(step);
   }
@@ -433,5 +433,5 @@ window.addEventListener('DOMContentLoaded', () => {
   document.body.style.opacity = '1';
 });
 
-console.log('%cPortfolio Site by Park Gyuri', 'font-size:14px; font-weight:bold; color:#2563eb;');
-console.log('%c🚀 Built with HTML, CSS, Vanilla JS', 'font-size:12px; color:#64748b;');
+console.log('%c박규리 (Park Gyuri) — Portfolio', 'font-size:14px; font-weight:bold; color:#2563eb;');
+console.log('%c🌏 고려대 일어일문학과 · JLPT N1 · TOEIC 900', 'font-size:12px; color:#64748b;');

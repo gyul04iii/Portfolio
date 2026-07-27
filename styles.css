@@ -526,7 +526,7 @@ body.cursor-click .cursor {
   color: var(--white);
   line-height: 1;
 }
-.hero__stat-number::after { content: '+'; color: var(--blue-400); }
+/* suffix는 JS로 처리 — no ::after */
 .hero__stat-label {
   font-size: .8125rem;
   color: rgba(255,255,255,.5);
@@ -641,7 +641,7 @@ body.cursor-click .cursor {
 .about__info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 10px;
   margin-bottom: 32px;
 }
 .about__info-item {
@@ -963,6 +963,21 @@ body.cursor-click .cursor {
   color: var(--white);
 }
 .project-card__link:nth-child(2) { transition-delay: .05s; }
+
+/* Year badge (Activities cards) */
+.project-card__year {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: .04em;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+.project-card:hover .project-card__year {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .project-card__content { padding: 24px; }
 .project-card__category {
