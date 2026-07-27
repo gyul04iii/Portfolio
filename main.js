@@ -4,6 +4,66 @@
 
 'use strict';
 
+/* ── 0. i18n Language Switcher ────────────────────────────── */
+(function initI18n() {
+  const STORAGE_KEY = 'portfolio-lang';
+  let currentLang = localStorage.getItem(STORAGE_KEY) || 'en';
+
+  // Typed effect instance reference — reset on lang change
+  let typedRestart = null;
+
+  function applyLang(lang) {
+    const t = I18N[lang];
+    if (!t) return;
+    currentLang = lang;
+    localStorage.setItem(STORAGE_KEY, lang);
+
+    // html[lang]
+    document.getElementById('htmlRoot').setAttribute('lang', t.htmlLang);
+
+    // <title>
+    document.title = t.pageTitle;
+
+    // All [data-i18n] elements — textContent
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+
+    // Placeholder attributes [data-i18n-placeholder]
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+    });
+
+    // aria-label on hamburger
+    const hamburger = document.getElementById('hamburger');
+    if (hamburger) {
+      const isOpen = hamburger.classList.contains('open');
+      hamburger.setAttribute('aria-label', isOpen ? t.menuClose : t.menuOpen);
+    }
+
+    // Update active lang button (both desktop + mobile)
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // Restart typed text with new phrases
+    if (typedRestart) typedRestart(t.typedPhrases);
+  }
+
+  // Wire up all lang buttons (desktop + mobile)
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  });
+
+  // Expose restart hook for typed effect
+  window.__setTypedRestart = function(fn) { typedRestart = fn; };
+
+  // Apply on load
+  applyLang(currentLang);
+})();
+
 /* ── 1. Custom Cursor ─────────────────────────────────────── */
 (function initCursor() {
   const cursor   = document.getElementById('cursor');
@@ -163,32 +223,24 @@
   const el = document.getElementById('typedText');
   if (!el) return;
 
-  const phrases = [
-    'Trilingual Communicator',
-    'Global Business Professional',
-    'International Affairs',
-    'Japanese N1 · English 900',
-    'Project Manager',
-  ];
-
-  let phraseIdx = 0;
-  let charIdx   = 0;
+  let phrases    = (typeof I18N !== 'undefined') ? I18N['en'].typedPhrases : ['Trilingual Communicator'];
+  let phraseIdx  = 0;
+  let charIdx    = 0;
   let isDeleting = false;
-  let isPaused   = false;
+  let timerId    = null;
 
-  // Create cursor element
+  const TYPING_SPEED = 80;
+  const DELETE_SPEED = 40;
+  const PAUSE_AFTER  = 2000;
+  const PAUSE_BEFORE = 400;
+
+  // Create cursor element once
   const cursorEl = document.createElement('span');
   cursorEl.className = 'typed-cursor';
   el.after(cursorEl);
 
-  const TYPING_SPEED  = 80;
-  const DELETE_SPEED  = 40;
-  const PAUSE_AFTER   = 2000;
-  const PAUSE_BEFORE  = 400;
-
   function type() {
     const current = phrases[phraseIdx];
-
     if (isDeleting) {
       el.textContent = current.substring(0, charIdx - 1);
       charIdx--;
@@ -200,17 +252,27 @@
     let delay = isDeleting ? DELETE_SPEED : TYPING_SPEED;
 
     if (!isDeleting && charIdx === current.length) {
-      // Finished typing — pause then delete
       delay = PAUSE_AFTER;
       isDeleting = true;
     } else if (isDeleting && charIdx === 0) {
-      // Finished deleting — move to next phrase
       isDeleting = false;
       phraseIdx  = (phraseIdx + 1) % phrases.length;
-      delay = PAUSE_BEFORE;
+      delay      = PAUSE_BEFORE;
     }
+    timerId = setTimeout(type, delay);
+  }
 
-    setTimeout(type, delay);
+  // Expose restart hook so i18n switcher can reset phrases
+  if (typeof window.__setTypedRestart === 'function') {
+    window.__setTypedRestart(function(newPhrases) {
+      clearTimeout(timerId);
+      phrases    = newPhrases;
+      phraseIdx  = 0;
+      charIdx    = 0;
+      isDeleting = false;
+      el.textContent = '';
+      timerId = setTimeout(type, PAUSE_BEFORE);
+    });
   }
 
   type();
@@ -358,18 +420,17 @@
 
     const btn  = form.querySelector('button[type="submit"]');
     const orig = btn.textContent;
+    const lang = localStorage.getItem('portfolio-lang') || 'en';
+    const t    = (typeof I18N !== 'undefined') ? I18N[lang] : {};
 
-    // Loading state
-    btn.textContent = '전송 중...';
+    btn.textContent = t.contactSending || 'Sending...';
     btn.disabled    = true;
 
-    // Simulate async submit
     setTimeout(() => {
-      btn.textContent = '✓  메시지가 전송되었습니다!';
+      btn.textContent = t.contactSent || '✓  Sent!';
       form.classList.add('success');
       form.reset();
 
-      // Reset after 3s
       setTimeout(() => {
         btn.textContent = orig;
         btn.disabled    = false;
