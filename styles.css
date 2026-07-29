@@ -1278,3 +1278,63 @@ a.contact__detail-value:hover { color: var(--blue-600); }
     display: none;
   }
 }
+
+/* ============================================================
+   CONTACT EMAIL CTA CARD
+   ============================================================ */
+.contact__email-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__email-card {
+  text-align: center;
+  padding: 56px 48px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  max-width: 420px;
+  width: 100%;
+}
+
+.contact__email-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--blue-200);
+}
+
+.contact__email-icon {
+  width: 56px;
+  height: 56px;
+  color: var(--blue-500);
+  margin: 0 auto 24px;
+}
+
+.contact__email-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.contact__email-subtitle {
+  font-size: .9375rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.btn--lg {
+  padding: 18px 36px;
+  font-size: 1.0625rem;
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 768px) {
+  .contact__email-card {
+    padding: 40px 24px;
+  }
+}

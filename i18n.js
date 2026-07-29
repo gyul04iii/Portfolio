@@ -245,6 +245,10 @@ const I18N = {
     exp4Tag3: "Int'l Forum",
 
     /* ── footer ── */
+    contactEmailCta: 'Send me an email directly',
+    contactEmailDesc: 'Click the button below to compose an email to me via Gmail.',
+    contactEmailBtn: '✉️  Email Me',
+
     footerCopy:    '© 2026 Park Gyuri. All rights reserved.',
     footerTagline: 'Korea Univ. · JLPT N1 · TOEIC 900',
   },
@@ -463,6 +467,10 @@ const I18N = {
     act8T3: '한일문화',
     exp6Tag3: '산업 분석',
 
+    contactEmailCta: '이메일을 직접 보내주세요',
+    contactEmailDesc: '아래 버튼을 클릭하면 Gmail을 통해 바로 메일을 작성할 수 있습니다.',
+    contactEmailBtn: '✉️  이메일 보내기',
+
     footerCopy: '© 2026 박규리 (Park Gyuri). All rights reserved.',
     footerTagline: '고려대학교 일어일문학과 · JLPT N1 · TOEIC 900',
   },
@@ -679,6 +687,10 @@ const I18N = {
     act4T3: '議題設定', act8T3: '韓日文化',
 
     act8T3: '韓日文化', exp6Tag3: '産業分析',
+
+    contactEmailCta: 'メールを直接お送りください',
+    contactEmailDesc: '下のボタンをクリックすると、Gmailから直接メールを作成できます。',
+    contactEmailBtn: '✉️  メールを送る',
 
     footerCopy: '© 2026 パク・ギュリ (Park Gyuri). All rights reserved.',
     footerTagline: '高麗大学校 · JLPT N1 · TOEIC 900',

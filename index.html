@@ -540,25 +540,18 @@
             </a>
           </div>
         </div>
-        <form class="contact__form reveal" id="contactForm">
-          <div class="form-group">
-            <label for="name" class="form-label" data-i18n="contactNameLabel">Name</label>
-            <input type="text" id="name" class="form-input" data-i18n-placeholder="contactNamePh" placeholder="Your Name" required />
+        <div class="contact__email-cta reveal">
+          <div class="contact__email-card">
+            <svg class="contact__email-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <h3 class="contact__email-title" data-i18n="contactEmailCta">Send me an email directly</h3>
+            <p class="contact__email-subtitle" data-i18n="contactEmailDesc">Click the button below to compose an email to me via Gmail.</p>
+            <a href="https://mail.google.com/mail/?view=cm&to=gyul04iii@gmail.com" target="_blank" rel="noopener" class="btn btn--primary btn--lg" data-i18n="contactEmailBtn">
+              ✉️  Email Me
+            </a>
           </div>
-          <div class="form-group">
-            <label for="email" class="form-label" data-i18n="contactEmailLabel">Email</label>
-            <input type="email" id="email" class="form-input" placeholder="your@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="subject" class="form-label" data-i18n="contactSubjectLabel">Subject</label>
-            <input type="text" id="subject" class="form-input" data-i18n-placeholder="contactSubjectPh" placeholder="Job Inquiry / Collaboration Proposal" required />
-          </div>
-          <div class="form-group">
-            <label for="message" class="form-label" data-i18n="contactMsgLabel">Message</label>
-            <textarea id="message" class="form-input" rows="5" data-i18n-placeholder="contactMsgPh" placeholder="Tell me about your opportunity or project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full" data-i18n="contactBtnSubmit">Send Message</button>
-        </form>
+        </div>
       </div>
     </div>
   </section>

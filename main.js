@@ -410,35 +410,7 @@
 })();
 
 
-/* ── 9. Contact Form ──────────────────────────────────────── */
-(function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const btn  = form.querySelector('button[type="submit"]');
-    const orig = btn.textContent;
-    const lang = localStorage.getItem('portfolio-lang') || 'en';
-    const t    = (typeof I18N !== 'undefined') ? I18N[lang] : {};
-
-    btn.textContent = t.contactSending || 'Sending...';
-    btn.disabled    = true;
-
-    setTimeout(() => {
-      btn.textContent = t.contactSent || '✓  Sent!';
-      form.classList.add('success');
-      form.reset();
-
-      setTimeout(() => {
-        btn.textContent = orig;
-        btn.disabled    = false;
-        form.classList.remove('success');
-      }, 3000);
-    }, 1200);
-  });
-})();
+/* ── 9. (Contact Form removed — replaced with Gmail button) ── */
 
 
 /* ── 10. Parallax Scroll Effect ──────────────────────────── */
