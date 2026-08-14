@@ -4,6 +4,31 @@
 
 'use strict';
 
+/* ── Section Loader ───────────────────────────────────────── */
+(async function loadSections() {
+  const app = document.getElementById('app');
+  const sectionFiles = [
+    'sections/nav.html',
+    'sections/hero.html',
+    'sections/about.html',
+    'sections/skills.html',
+    'sections/experience.html',
+    'sections/activities.html',
+    'sections/contact.html',
+    'sections/footer.html',
+  ];
+
+  const fragments = await Promise.all(
+    sectionFiles.map(file => fetch(file).then(r => r.text()))
+  );
+  app.innerHTML = fragments.join('\n');
+
+  // After all sections are loaded, initialize everything
+  initAll();
+})();
+
+function initAll() {
+
 /* ── 0. i18n Language Switcher ────────────────────────────── */
 (function initI18n() {
   const STORAGE_KEY = 'portfolio-lang';
@@ -462,9 +487,9 @@
 })();
 
 /* ── 12. Prevent FOUC / Initialize ───────────────────────── */
-window.addEventListener('DOMContentLoaded', () => {
-  document.body.style.opacity = '1';
-});
+document.body.style.opacity = '1';
 
 console.log('%c박규리 (Park Gyuri) — Portfolio', 'font-size:14px; font-weight:bold; color:#2563eb;');
 console.log('%c🌏 고려대 일어일문학과 · JLPT N1 · TOEIC 900', 'font-size:12px; color:#64748b;');
+
+} // end initAll
