@@ -806,7 +806,8 @@ body.cursor-click .cursor {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 0; top: 8px; bottom: 8px;
+  /* 마커 중심(좌측 기준 8px)에 선 중심을 맞춤 → 8px - 선 너비의 절반(1px) */
+  left: 7px; top: 8px; bottom: 8px;
   width: 2px;
   background: linear-gradient(to bottom, var(--blue-500), var(--blue-300));
 }
