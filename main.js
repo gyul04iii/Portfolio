@@ -339,32 +339,7 @@ function initAll() {
 })();
 
 
-/* ── 6. Skill Bars ────────────────────────────────────────── */
-(function initSkillBars() {
-  const bars = document.querySelectorAll('.skill-bar');
-  if (!bars.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const bar   = entry.target;
-      const fill  = bar.querySelector('.skill-bar__fill');
-      if (!fill) return;
-      const width = fill.dataset.width;
-      fill.style.setProperty('--width', width + '%');
-      // Small delay so the CSS transition fires after width is set
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          bar.classList.add('animated');
-          fill.style.width = width + '%';
-        });
-      });
-      observer.unobserve(bar);
-    });
-  }, { threshold: 0.3 });
-
-  bars.forEach(b => observer.observe(b));
-})();
+/* ── 6. (Skill Bars removed — 역량은 태그로 표기, 퍼센트 게이지 미사용) ── */
 
 
 /* ── 7. Hero Floating Particles ──────────────────────────── */

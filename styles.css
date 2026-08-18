@@ -755,32 +755,11 @@ body.cursor-click .cursor {
 }
 .skills__icon { font-size: 1.75rem; }
 
-.skills__items { display: flex; flex-direction: column; gap: 16px; }
-
-.skill-bar {}
-.skill-bar__info {
+/* 역량은 태그(chip)로 표기 — 근거 없는 자기평가 퍼센트/게이지는 사용하지 않음 */
+.skills__items {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-size: .875rem;
-  font-weight: 600;
-  color: var(--gray-700);
-}
-.skill-bar__track {
-  height: 8px;
-  background: var(--gray-200);
-  border-radius: 100px;
-  overflow: hidden;
-}
-.skill-bar__fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--blue-600), var(--blue-400));
-  border-radius: 100px;
-  width: 0;
-  transition: width 1.2s cubic-bezier(.4,0,.2,1);
-}
-.skill-bar.animated .skill-bar__fill {
-  width: var(--width, 0);
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 /* Tech stack tags */
