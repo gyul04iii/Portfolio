@@ -206,6 +206,12 @@ const I18N = {
     act8T1:           "Japanese",
     act8T2:           "Storytelling",
     act8T3:           "Korea-Japan Culture",
+    act9Cat:          "Research",
+    act9Title:        "Seoul Young Careerians Camp 2026 — Overseas Sales Track",
+    act9Desc:         "Five-week job bootcamp funded by Seoul City. Analysed a Japanese trading house and built a KPI-based market entry plan, then rebuilt the final report around eight items of mentor feedback. Proposed 'Seoul Trade Bridge', a policy idea linking youth with SME exporters.",
+    act9T1:           "Market Analysis",
+    act9T2:           "Overseas Sales",
+    act9T3:           "Policy Proposal",
 
     /* ── contact ── */
     contactTag:          "Get In Touch",
@@ -431,6 +437,12 @@ const I18N = {
     act8T1:           "일본어",
     act8T2:           "스토리텔링",
     act8T3:           "한일문화",
+    act9Cat:          "Research",
+    act9Title:        "2026 서울영커리언스 캠프 — 해외영업직군",
+    act9Desc:         "서울시 지원 5주 직무 부트캠프. 일본 종합상사 시장 분석과 KPI 기반 추진 계획을 수행하고, 현직자 멘토링 피드백 8항목을 반영해 최종 보고서를 재구성. 청년과 수출 중소기업을 연결하는 정책 아이디어 'Seoul Trade Bridge'를 제안했습니다.",
+    act9T1:           "시장 분석",
+    act9T2:           "해외영업",
+    act9T3:           "정책 제안",
 
     /* ── contact ── */
     contactTag:          "Get In Touch",
@@ -656,6 +668,12 @@ const I18N = {
     act8T1:           "日本語",
     act8T2:           "ストーリーテリング",
     act8T3:           "韓日文化",
+    act9Cat:          "Research",
+    act9Title:        "2026 ソウル・ヤングキャリアンズ・キャンプ — 海外営業職群",
+    act9Desc:         "ソウル市支援の5週間職務ブートキャンプ。日本の総合商社の市場分析とKPIベースの推進計画を作成し、現職者メンタリングのフィードバック8項目を反映して最終報告書を再構成。若者と輸出中小企業をつなぐ政策アイデア「Seoul Trade Bridge」を提案しました。",
+    act9T1:           "市場分析",
+    act9T2:           "海外営業",
+    act9T3:           "政策提案",
 
     /* ── contact ── */
     contactTag:          "Get In Touch",
