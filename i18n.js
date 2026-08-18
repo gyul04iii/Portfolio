@@ -102,8 +102,8 @@ const I18N = {
     exp3Role:    'Exchange Student',
     exp3Company: 'National University of Singapore (NUS)',
     exp3Period:  '2026. 01 — 05',
-    exp3Desc:    'Completed coursework in English. Strengthened global business communication and gained cross-cultural practical experience through collaboration with multinational peers.',
-    exp3Tag1: 'English', exp3Tag2: 'Global', exp3Tag3: 'NUS',
+    exp3Desc:    'Completed coursework in English. Took part in the Singapore Sustainable Economy Dialogue, a Bank of America APAC career session, the HUAP international conference, and the AIPA Roadshow. Built multinational networking and English communication skills through residential community and cultural exchange activities.',
+    exp3Tag1: 'Global Networking', exp3Tag2: 'Sustainability', exp3Tag3: 'NUS',
 
     exp4Role:    'Global Seminar Support',
     exp4Company: 'MOEF KED Talk · MOFA Youth Latin America Forum',
@@ -185,7 +185,7 @@ const I18N = {
     /* ── exp tags (2nd, 3rd) ── */
     exp1Tag2: 'Budgeting',      exp1Tag3: 'Leadership',
     exp2Tag2: 'Japanese',       exp2Tag3: 'PR Strategy',
-    exp3Tag2: 'Global',         exp3Tag3: 'NUS',
+    exp3Tag2: 'Sustainability', exp3Tag3: 'NUS',
     exp4Tag2: 'MOEF',           exp4Tag3: "Int'l Forum",
     exp5Tag2: 'Event Ops',      exp5Tag3: 'Multilingual',
     exp6Tag2: 'Best Award',     exp6Tag3: 'Industry Analysis',
@@ -307,8 +307,8 @@ const I18N = {
 
     exp3Role: '교환학생', exp3Company: '싱가포르 국립대학교 (NUS)',
     exp3Period: '2026. 01 — 05',
-    exp3Desc: '영어 기반 전공 수학 완료. 다국적 학생들과의 협업을 통해 글로벌 비즈니스 커뮤니케이션 역량 강화 및 cross-cultural 실무 경험 확보.',
-    exp3Tag1: '영어', exp3Tag2: '글로벌', exp3Tag3: 'NUS',
+    exp3Desc: '영어 기반 전공 수학 완료. 지속가능 경제 다이얼로그, Bank of America APAC 커리어 세션, HUAP 국제 학술 컨퍼런스, AIPA 로드쇼 등 교내외 프로그램에 적극 참여. 기숙사 커뮤니티 및 문화 교류 활동을 통해 다국적 네트워킹과 영어 커뮤니케이션 역량 강화.',
+    exp3Tag1: '글로벌 네트워킹', exp3Tag2: '지속가능성', exp3Tag3: 'NUS',
 
     exp4Role: '글로벌 세미나 운영 지원', exp4Company: '기획재정부 KED Talk · 외교부 청년 중남미 진출포럼',
     exp4Period: '2024 — 2025',
@@ -373,7 +373,7 @@ const I18N = {
     /* ── exp tags (2nd, 3rd) ── */
     exp1Tag2: '예산 관리',      exp1Tag3: '리더십',
     exp2Tag2: '일본어',         exp2Tag3: '홍보 전략',
-    exp3Tag2: '글로벌',         exp3Tag3: 'NUS',
+    exp3Tag2: '지속가능성',     exp3Tag3: 'NUS',
     exp4Tag2: '기획재정부',     exp4Tag3: '국제 포럼',
     exp5Tag2: '행사 운영',      exp5Tag3: '다국어',
     exp6Tag2: '최우수상',       exp6Tag3: '산업 분석',
@@ -529,8 +529,8 @@ const I18N = {
 
     exp3Role: '交換留学生', exp3Company: 'シンガポール国立大学（NUS）',
     exp3Period: '2026. 01 — 05',
-    exp3Desc: '英語による専攻科目を修了。多国籍の学生との協働を通じてグローバルビジネスコミュニケーション力を強化し、異文化実務経験を取得。',
-    exp3Tag1: '英語', exp3Tag2: 'グローバル', exp3Tag3: 'NUS',
+    exp3Desc: '英語による専攻科目を修了。シンガポール持続可能経済ダイアログ、Bank of America APACキャリアセッション、HUAP国際学術カンファレンス、AIPAロードショーなど学内外のプログラムに積極的に参加。寮コミュニティや文化交流活動を通じて多国籍ネットワーキングと英語コミュニケーション力を強化。',
+    exp3Tag1: 'ネットワーキング', exp3Tag2: 'サステナビリティ', exp3Tag3: 'NUS',
 
     exp4Role: 'グローバルセミナー運営支援', exp4Company: '企画財政部 KED Talk · 外交部 青年中南米進出フォーラム',
     exp4Period: '2024 — 2025',
@@ -595,7 +595,7 @@ const I18N = {
     /* ── exp tags (2nd, 3rd) ── */
     exp1Tag2: '予算管理',       exp1Tag3: 'リーダーシップ',
     exp2Tag2: '日本語',         exp2Tag3: 'PR戦略',
-    exp3Tag2: 'グローバル',     exp3Tag3: 'NUS',
+    exp3Tag2: 'サステナビリティ', exp3Tag3: 'NUS',
     exp4Tag2: '企画財政部',     exp4Tag3: '国際フォーラム',
     exp5Tag2: 'イベント運営',   exp5Tag3: '多言語',
     exp6Tag2: '最優秀賞',       exp6Tag3: '産業分析',
