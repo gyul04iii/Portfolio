@@ -17,6 +17,9 @@
               <ellipse cx="100" cy="160" rx="60" ry="30" fill="#1E40AF" opacity="0.2"/>
             </svg>
             <span>GR</span>
+            <!-- 프로필 사진: assets/profile.jpg 가 없으면 위 GR 플레이스홀더가 그대로 보임 -->
+            <img src="assets/profile.jpg" alt="Park Gyuri" class="about__photo"
+                 loading="lazy" onerror="this.remove()" />
           </div>
           <div class="about__image-badge">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -53,7 +56,6 @@
             <span class="about__info-value" data-i18n="aboutValueEmail">gyul04iii@gmail.com</span>
           </div>
         </div>
-        <a href="mailto:gyul04iii@gmail.com" class="btn btn--primary" data-i18n="aboutBtn">Send Email</a>
       </div>
     </div>
   </div>
