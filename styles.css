@@ -234,7 +234,10 @@ body.cursor-click .cursor {
   margin-bottom: 16px;
 }
 .section-title {
-  font-family: var(--font-display);
+  /* Playfair Display 에는 한글 글리프가 없어 시스템 세리프로 폴백되므로 Pretendard 사용 */
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -.02em;
   font-size: clamp(2rem, 4vw, 2.75rem);
   color: var(--gray-900);
   line-height: 1.2;
@@ -242,6 +245,15 @@ body.cursor-click .cursor {
 .section-title em {
   font-style: normal;
   color: var(--blue-600);
+}
+
+/* About 섹션 제목("글로벌 현장을 누비는 / 트라이링구얼")만 기존 서체 유지.
+   font-weight/letter-spacing 도 변경 전 값(h2 기본 700, 기본 자간)으로 되돌린다.
+   일본어일 때는 html[lang="ja"] 규칙이 우선순위가 높아 Noto Sans JP 가 유지된다. */
+.about .section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: normal;
 }
 
 /* ── Reveal animation ── */
