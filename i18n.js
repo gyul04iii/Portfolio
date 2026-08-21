@@ -148,6 +148,13 @@ const I18N = {
     exp7Tag1:    "Generative AI",
     exp7Tag2:    "AI Service Planning",
     exp7Tag3:    "GEO Analysis",
+    exp8Role:    "Teaching Assistant",
+    exp8Company: "Korean Language Center, Korea Univ.",
+    exp8Period:  "2025. 06 — 08",
+    exp8Desc:    "Supported the operation of the summer Korean language programme. Handled airport pickup and accommodation guidance for international students, led cultural experience and field trip groups, and carried out administrative work including entrance and completion ceremony preparation.",
+    exp8Tag1:    "Programme Support",
+    exp8Tag2:    "International Students",
+    exp8Tag3:    "Administration",
 
     /* ── activities ── */
     actTag:           "Activities",
@@ -414,6 +421,13 @@ const I18N = {
     exp7Tag1:    "생성형 AI",
     exp7Tag2:    "AI 서비스 기획",
     exp7Tag3:    "GEO 분석",
+    exp8Role:    "조교",
+    exp8Company: "고려대학교 한국어센터",
+    exp8Period:  "2025. 06 — 08",
+    exp8Desc:    "여름 학기 한국어 교육 프로그램 운영 지원. 외국인 학생 공항 픽업 및 숙소 안내, 문화체험·현장학습 인솔을 담당하고 입학식·수료식 준비 등 행정 실무를 수행했습니다.",
+    exp8Tag1:    "교육 지원",
+    exp8Tag2:    "외국인 응대",
+    exp8Tag3:    "행정 실무",
 
     /* ── activities ── */
     actTag:           "Activities",
@@ -680,6 +694,13 @@ const I18N = {
     exp7Tag1:    "生成AI",
     exp7Tag2:    "AIサービス企画",
     exp7Tag3:    "GEO分析",
+    exp8Role:    "助教",
+    exp8Company: "高麗大学校 韓国語センター",
+    exp8Period:  "2025. 06 — 08",
+    exp8Desc:    "夏学期の韓国語教育プログラムの運営を支援。外国人学生の空港送迎と宿舎案内を担当し、文化体験・現地学習の引率、入学式・修了式の準備など行政実務を遂行しました。",
+    exp8Tag1:    "教育支援",
+    exp8Tag2:    "留学生対応",
+    exp8Tag3:    "行政実務",
 
     /* ── activities ── */
     actTag:           "Activities",
