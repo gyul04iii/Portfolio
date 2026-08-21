@@ -305,6 +305,7 @@ body.cursor-click .cursor {
   color: var(--blue-900);
   letter-spacing: -.02em;
   margin-right: auto;
+  white-space: nowrap;   /* 로고가 "GR. Portfolio"로 길어져 줄바꿈 방지 (nav 높이 72px 고정) */
 }
 .nav__logo-dot { color: var(--blue-600); }
 
